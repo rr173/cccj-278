@@ -1,0 +1,133 @@
+{
+  "calendars": [
+    {
+      "service_day": "2026-11-24",
+      "start": "2026-11-24T03:00:00+08:00",
+      "end": "2026-11-25T02:59:59+08:00"
+    }
+  ],
+  "stations": [
+    {
+      "station_id": "A",
+      "name": "甲站"
+    },
+    {
+      "station_id": "B",
+      "name": "乙站"
+    },
+    {
+      "station_id": "C",
+      "name": "丙站"
+    },
+    {
+      "station_id": "D",
+      "name": "丁站"
+    },
+    {
+      "station_id": "E",
+      "name": "戊站"
+    }
+  ],
+  "transfers": [
+    {
+      "from_station": "B",
+      "to_station": "B"
+    },
+    {
+      "from_station": "C",
+      "to_station": "C"
+    },
+    {
+      "from_station": "D",
+      "to_station": "D"
+    }
+  ],
+  "templates": [
+    {
+      "template_id": "T2",
+      "size": 2,
+      "max_elapsed_minutes": 120,
+      "transfers": [
+        {
+          "from_station": "__ANY__",
+          "to_station": "__ANY__"
+        }
+      ],
+      "directions": [
+        null,
+        null
+      ],
+      "ticket_types": [
+        null,
+        null
+      ],
+      "same_service_day": true,
+      "entitlement": "E"
+    }
+  ],
+  "packages": [
+    {
+      "package_id": "X",
+      "template_id": "T2",
+      "price": 500,
+      "allocations": [
+        250,
+        250
+      ]
+    }
+  ],
+  "quotas": [
+    {
+      "passenger_id": "P1",
+      "service_day": "2026-11-24",
+      "entitlement": "E",
+      "limit": 1
+    }
+  ],
+  "events": [
+    {
+      "event_id": "e1",
+      "passenger_id": "P1",
+      "ticket_type": "regular",
+      "time": "2026-11-24T08:00:00+08:00",
+      "line": "L1",
+      "direction": "up",
+      "board_station": "A",
+      "alight_station": "B",
+      "fare": 300
+    },
+    {
+      "event_id": "e2",
+      "passenger_id": "P1",
+      "ticket_type": "regular",
+      "time": "2026-11-24T08:30:00+08:00",
+      "line": "L1",
+      "direction": "up",
+      "board_station": "B",
+      "alight_station": "C",
+      "fare": 400
+    },
+    {
+      "event_id": "e3",
+      "passenger_id": "P1",
+      "ticket_type": "regular",
+      "time": "2026-11-24T09:00:00+08:00",
+      "line": "L1",
+      "direction": "up",
+      "board_station": "C",
+      "alight_station": "D",
+      "fare": 300
+    },
+    {
+      "event_id": "e4",
+      "passenger_id": "P1",
+      "ticket_type": "regular",
+      "time": "2026-11-24T09:30:00+08:00",
+      "line": "L1",
+      "direction": "up",
+      "board_station": "D",
+      "alight_station": "E",
+      "fare": 500
+    }
+  ]
+}
